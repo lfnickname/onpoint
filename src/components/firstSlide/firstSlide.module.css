@@ -4,7 +4,6 @@
     overflow: hidden;
     position: absolute;
     top: 0;
-    background: url(/src/img/page1/background.png) center center;
     background-size: cover;
 }
 
@@ -20,4 +19,88 @@
 @keyframes swipe {
     0% { left: 0}
     100% {left: -100%}
+}
+
+.wrapper {
+    position: static;
+}
+
+.helo_txt {
+    font-family: DINpro;
+    font-size: 35px;
+    /* font-family: "DINPro"; */
+    color: rgb(36, 36, 36);
+    text-transform: uppercase;
+    line-height: 4.074;
+    text-align: left;
+    /* -moz-transform: matrix( 5.07288435581728,0,0,5.03087612481503,0,0);
+    -webkit-transform: matrix( 5.07288435581728,0,0,5.03087612481503,0,0);
+    -ms-transform: matrix( 5.07288435581728,0,0,5.03087612481503,0,0); */
+    position: absolute;
+    z-index: 7;
+    top: 22%;
+    left: 104px;
+  }
+  
+  .title {
+    font-size: 100px;
+    font-family: Gilroy;
+    /* font-family: "Gilroy"; */
+    color: rgb(23, 23, 23);
+    text-transform: uppercase;
+    line-height: 1.073;
+    text-align: left;
+    /* -moz-transform: matrix( 7.40362654738437,0,0,7.34231758931592,0,0);
+    -webkit-transform: matrix( 7.40362654738437,0,0,7.34231758931592,0,0);
+    -ms-transform: matrix( 7.40362654738437,0,0,7.34231758931592,0,0); */
+    position: absolute;
+    top:36%;
+    left: 104px;
+    z-index: 6;
+    letter-spacing: 7px;
+  }
+  
+
+  .fat {
+      font-family: Gilroy bold;
+  }
+
+.last_row_flex{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.button_flex_wr{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-left: 25px
+}
+
+.buttonwrapper {
+}
+
+.button_label {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    letter-spacing: 0px;
+    width: 280px;
+    height: 80px;
+    text-transform: none;
+    font-size: 32px;
+    background-color: rgb(255, 106, 159);
+    border-radius: 35px;
+    border: none
+  }
+
+.next_button {
+    cursor: pointer;
+    border: none;
+    background-color: #111111;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
 }

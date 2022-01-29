@@ -1,0 +1,16 @@
+.flex {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-top: 37.5px;
+    margin-left: 104px;
+}
+
+.home, .line, .name {
+    margin-right: 35px
+}
+
+.name {
+    font-size: 20px;
+}
+
