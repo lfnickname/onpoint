@@ -81,6 +81,10 @@
 .buttonwrapper {
 }
 
+.button_text{
+    font-family: DINPro;
+}
+
 .button_label {
     display: flex;
     flex-direction: row;
