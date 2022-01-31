@@ -1,4 +1,4 @@
-builded: onpoint.lfnn.ru
+builded: https://onpoint.lfnn.ru
 ## Available Scripts
 
 In the project directory, you can run:
