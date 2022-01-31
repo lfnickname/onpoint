@@ -6,6 +6,7 @@ import ThirdSlide from "../thirdSlide/ThirdSlide";
 import styles from './app.module.css'
 import {ReactComponent as Logo} from '../../svg/logo.svg'
 function App() {
+  console.log('render main')
   const [firstSlideStyles, setFirstSlideStyles] = useState({left: '0'})
   const [secondSliderStyles, setSecondSliderStyles] = useState({left: '100%'})
   const [thirdSliderStyles, setThirdSliderStyles] = useState({left: '100%'})
@@ -16,6 +17,7 @@ function App() {
     backgroundPosition: '0% 0'
   })
 
+  // Распознование и обработка горизонтального свайпа
   useEffect(()=> {
     if (((touchStart - touchEnd ) > 100) && currentPage<3) {
       rightSwipe()
@@ -23,7 +25,7 @@ function App() {
     else if (((touchStart - touchEnd) < -100) && currentPage>1) {
       leftSwipe()
     }
-  }, [touchEnd])
+  }, [touchEnd]) 
 
 
 
@@ -36,6 +38,7 @@ function App() {
       })
       setFirstSlideStyles({left: '-100%', transition: 'left 0.5s'})
       setSecondSliderStyles({left: '0', transition: 'left 0.5s'})
+      
     }
     else if (currentPage===2){
       setCurrentPage(currentPage+1)
@@ -45,7 +48,6 @@ function App() {
       })
       setSecondSliderStyles({left: '-100%', transition: 'left 0.5s'})
       setThirdSliderStyles({left: '0', transition: 'left 0.5s'})
-      setCurrentPage(currentPage+1)
     }
     
   }
@@ -59,7 +61,6 @@ function App() {
       })
       setSecondSliderStyles({left: '0', transition: 'left 0.5s'})
       setThirdSliderStyles({left: '100%', transition: 'left 0.5s'})
-      
     }
     else if (currentPage===2){
       setCurrentPage(currentPage-1)
@@ -71,7 +72,26 @@ function App() {
       setSecondSliderStyles({left: '100%', transition: 'left 0.5s'})
       
     }
-    
+  }
+
+  // Отработка клика по Home
+
+  function navClickHandler(){
+    if (currentPage==2) leftSwipe()
+    else if (currentPage==3) {
+      console.log('here')
+      setCurrentPage(1)
+      setAppStyles({
+        backgroundPosition: '0% 0',
+        transition: 'background-position 0.5s'
+      })
+      setSecondSliderStyles({left: '0', transition: 'left 0.2s'})
+      setThirdSliderStyles({left: '100%', transition: 'left 0.2s'})
+      setTimeout(()=>{
+        setFirstSlideStyles({left: '0%', transition: 'left 0.5s'})
+        setSecondSliderStyles({left: '100%', transition: 'left 0.5s'})
+      }, 0)
+    }
   }
 
   return (
@@ -80,10 +100,10 @@ function App() {
     className={styles.app} 
     onTouchStart={e => SetTouchStart(e.targetTouches[0].clientX)}
     onTouchEnd={e => SetTouchEnd(e.changedTouches[0].clientX)}>
-      <div className={styles.nav}><Navbar/></div>
+      <div className={styles.nav}><Navbar clickHandler={()=>navClickHandler()}/></div>
       <div className={styles.logosvg}><Logo width={60}/></div>
-      <div ><FirstSlide style={firstSlideStyles}/></div>
-      <div ><SecondSlide style={secondSliderStyles}/></div>
+      <div ><FirstSlide style={firstSlideStyles} clickHandler={()=>rightSwipe()}/></div>
+      <div ><SecondSlide currentPage={currentPage} style={secondSliderStyles}/></div>
       <div ><ThirdSlide style={thirdSliderStyles}/></div>
     </div>
   );

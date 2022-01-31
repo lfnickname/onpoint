@@ -1,16 +1,21 @@
 .flex {
+    position: absolute;
     display: flex;
     flex-direction: row;
     align-items: center;
-    margin-top: 37.5px;
-    margin-left: 104px;
+    margin-top: 2%;
+    margin-left: 7%;
+    z-index: 99;
 }
 
 .home, .line, .name {
-    margin-right: 35px
+    margin-right: 20px;
+    font-family: Circle;
+    letter-spacing: 3px;
 }
 
 .name {
-    font-size: 20px;
+    font-size: 18px;
+    color: rgb(39, 39, 39);
 }
 

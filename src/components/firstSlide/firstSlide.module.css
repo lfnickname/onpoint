@@ -7,14 +7,6 @@
     background-size: cover;
 }
 
-.innerslide {
-}
-
-@media (min-width: 1200px) {
-    .slide {
-
-    }
-}
 
 @keyframes swipe {
     0% { left: 0}
@@ -27,41 +19,32 @@
 
 .helo_txt {
     font-family: DINpro;
-    font-size: 35px;
-    /* font-family: "DINPro"; */
+    font-size: 25px;
     color: rgb(36, 36, 36);
     text-transform: uppercase;
-    line-height: 4.074;
     text-align: left;
-    /* -moz-transform: matrix( 5.07288435581728,0,0,5.03087612481503,0,0);
-    -webkit-transform: matrix( 5.07288435581728,0,0,5.03087612481503,0,0);
-    -ms-transform: matrix( 5.07288435581728,0,0,5.03087612481503,0,0); */
     position: absolute;
     z-index: 7;
     top: 22%;
-    left: 104px;
+    left: 7%;
   }
   
-  .title {
-    font-size: 100px;
+.title {
+    font-size: 108px;
     font-family: Gilroy;
-    /* font-family: "Gilroy"; */
     color: rgb(23, 23, 23);
     text-transform: uppercase;
     line-height: 1.073;
     text-align: left;
-    /* -moz-transform: matrix( 7.40362654738437,0,0,7.34231758931592,0,0);
-    -webkit-transform: matrix( 7.40362654738437,0,0,7.34231758931592,0,0);
-    -ms-transform: matrix( 7.40362654738437,0,0,7.34231758931592,0,0); */
     position: absolute;
-    top:36%;
-    left: 104px;
+    top:28%;
+    left: 7%;
     z-index: 6;
     letter-spacing: 7px;
   }
   
 
-  .fat {
+.fat {
       font-family: Gilroy bold;
   }
 
@@ -78,8 +61,6 @@
     margin-left: 25px
 }
 
-.buttonwrapper {
-}
 
 .button_text{
     font-family: DINPro;
@@ -96,15 +77,147 @@
     text-transform: none;
     font-size: 32px;
     background-color: rgb(255, 106, 159);
-    border-radius: 35px;
+    border-radius: 45px;
     border: none
   }
 
 .next_button {
     cursor: pointer;
     border: none;
-    background-color: #111111;
+    background-color: rgb(23, 23, 23);
     width: 50px;
     height: 50px;
     border-radius: 50%;
+    box-shadow: 0 0 2px 4px rgba(255, 255, 255, 0.356) ; 
 }
+
+
+.bakti_1 {
+    position: absolute;
+    left: 5%;
+    top: 67%;
+    width: 7%;
+    z-index: 4;
+    animation: 8s bakti1ani infinite ease-in-out;
+  }  
+@keyframes bakti1ani {
+  from {
+    transform: translate(0, 0);
+  }
+  to {
+    transform: translate(0, 0);
+  }
+  50% {
+    transform: translate(25px, 60px);   
+  }
+}
+.pink_sperm {
+    position: absolute;
+    left: 0%;
+    top: 77%;
+    width: 30%;
+    z-index: 1;
+  }
+  
+
+.pink_sperm_1 {
+    position: absolute;
+    left: 43%;
+    top: 20%;
+    width: 57%;
+
+    z-index: 11;
+  }
+  
+
+.Layer4 {
+    position: absolute;
+    left: 53%;
+    top: 84%;
+    width: 22%;
+    z-index: 12;
+    animation: 6s layer4ani infinite ease-in-out;
+  }
+@keyframes layer4ani {
+  from {
+    transform: translate(-10px, 0) scale(1.1, 1.1);
+  }
+  to{
+    transform: translate(-10px, 0) scale(1.1, 1.1);
+  }
+  50% {
+    transform: translate(10px, 0) scale(1, 1);
+  }
+}
+
+.Layer4copy {
+    position: absolute;
+    left: 34%;
+    top: 82%;
+    width: 8%;
+    z-index: 13;
+  }
+
+.Layer4copy2 {
+    position: absolute;
+    left: 90%;
+    top: 3%;
+    width: 7%;
+    z-index: 14;
+  }
+  
+
+.Layer5 {
+    position: absolute;
+    left: 72%;
+    top: 8%;
+    width: 6%;
+    z-index: 15;
+    animation: 10s layer5ani infinite ease-in-out;
+  }
+
+@keyframes layer5ani {
+  from {
+    transform: translate(0, 0)
+  }
+  to {
+    transform: translate(0, 0)
+  }
+  50% {
+    transform: translate(40px, 20px)
+  }
+}
+
+.Layer7 {
+    position: absolute;
+    left: 0%;
+    top: 9%;
+    height: 15%;
+    z-index: 16;
+  }
+  
+
+.Layer8 {
+    position: absolute;
+    left: 84%;
+    top: 26%;
+    width: 11%;
+    z-index: 17;
+    animation: 10s layer8ani infinite linear;
+  }
+  
+
+@keyframes layer8ani {
+    from {
+      transform: translate(0, 0) rotate(0turn);
+    }
+    to {
+      transform: translate(0, 0) rotate(0turn);
+    }
+    33% {
+      transform: translate(-80px, -50px) rotate(0.1turn);
+    }
+    66% {
+      transform: translate(-70px, -70px) rotate(0.2turn);
+    }
+  }
